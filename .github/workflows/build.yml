@@ -14,6 +14,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        submodules: recursive  # 👈 ЭТО ЗАГРУЖАЕТ СУБМОДУЛИ
     
     - name: Setup MSVC
       uses: ilammy/msvc-dev-cmd@v1
